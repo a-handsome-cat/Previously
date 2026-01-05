@@ -293,6 +293,7 @@
 				DEVELOPMENT_TEAM = F5R54CB92X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Previously/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to camera to create cool collages";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show you photos made in your area";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -327,6 +328,7 @@
 				DEVELOPMENT_TEAM = F5R54CB92X;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Previously/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to camera to create cool collages";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show you photos made in your area";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
