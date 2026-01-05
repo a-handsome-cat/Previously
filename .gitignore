@@ -60,3 +60,9 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# Assets added for testing purposes
+Previously/Assets.xcassets/file1.imageset/
+Previously/Assets.xcassets/file2.imageset/
+Previously/Assets.xcassets/file3.imageset/
+Previously/Assets.xcassets/file4.imageset/
