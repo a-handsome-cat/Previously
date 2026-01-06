@@ -51,7 +51,7 @@ class CameraViewController: UIViewController {
         }
         
         if let point = historicPoint {
-            imageView.image = UIImage(named: point.fileName)
+            imageView.loadImage(urlString: point.fileURL)
             pointLabel.text = "\(point.title), \(point.year)"
         }
         
