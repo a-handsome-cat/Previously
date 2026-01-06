@@ -84,7 +84,7 @@ extension MapViewController: CLLocationManagerDelegate {
             mapView.setRegion(region, animated: true)
             hasSetInitialLocation = true
             
-            viewModel.addMockPoints(coordinate: location.coordinate)
+            viewModel.loadData(coordinate: location.coordinate)
         }
     }
 }
