@@ -24,7 +24,7 @@ class MapViewController: UIViewController {
         mapView.showsUserLocation = true
         mapView.delegate = self
         
-        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: pinIdentifier)
+        mapView.register(PhotoAnnotationView.self, forAnnotationViewWithReuseIdentifier: pinIdentifier)
         
         bindViewModel()
         
@@ -93,12 +93,10 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
         guard !(annotation is MKUserLocation) else { return nil }
         
-        guard let _ = annotation as? PhotoAnnotation else { return nil }
+        guard let annotation = annotation as? PhotoAnnotation else { return nil }
         
-        let view = mapView.dequeueReusableAnnotationView(withIdentifier: pinIdentifier, for: annotation) as? MKMarkerAnnotationView
-        
-        view?.markerTintColor = .systemIndigo
-        view?.glyphImage = UIImage(systemName: "camera.fill")
+        let view = mapView.dequeueReusableAnnotationView(withIdentifier: pinIdentifier, for: annotation) as? PhotoAnnotationView
+        view?.configure(annotation: annotation)
         view?.canShowCallout = true
         
         let button = UIButton(type: .detailDisclosure)
