@@ -3,11 +3,12 @@ import UIKit
 let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
-    func loadImage(urlString: String) {
+    func loadImage(urlString: String, onImageLoaded: (() -> Void)? = nil) {
         self.image = nil
         
         if let cachedImage = imageCache.object(forKey: urlString as NSString) {
             self.image = cachedImage
+            onImageLoaded?()
             return
         }
         
@@ -21,6 +22,8 @@ extension UIImageView {
             DispatchQueue.main.async {
                 self.image = image
             }
+            
+            onImageLoaded?()
         }
         
         task.resume()
