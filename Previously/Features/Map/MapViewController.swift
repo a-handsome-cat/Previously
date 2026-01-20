@@ -110,4 +110,12 @@ extension MapViewController: MKMapViewDelegate {
         
         onPointSelect?(annotation.historicPoint)
     }
+    
+    func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+        for view in views {
+            if view.annotation is MKUserLocation {
+                view.layer.zPosition = 999
+            }
+        }
+    }
 }

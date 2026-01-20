@@ -20,6 +20,20 @@ class AppCoordinator: Coordinator {
     func showCameraFlow(for point: HistoricPoint) {
         let cameraViewController = CameraViewController()
         cameraViewController.historicPoint = point
+        
+        cameraViewController.onPhotoTaken = { [weak self] image in
+            self?.showCollageScreen(image: image)
+        }
+        
         navigationController.pushViewController(cameraViewController, animated: true)
+    }
+    
+    func showCollageScreen(image: UIImage) {
+        let collageViewController = CollageViewController()
+        collageViewController.image = image
+        collageViewController.onDismissButtonPressed = {
+            self.navigationController.popToRootViewController(animated: true)
+        }
+        navigationController.pushViewController(collageViewController, animated: true)
     }
 }

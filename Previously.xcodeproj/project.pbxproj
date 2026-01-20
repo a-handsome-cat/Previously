@@ -295,6 +295,7 @@
 				INFOPLIST_FILE = Previously/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to camera to create cool collages";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show you photos made in your area";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need this to save your cool collages directly to Photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -330,6 +331,7 @@
 				INFOPLIST_FILE = Previously/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to camera to create cool collages";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show you photos made in your area";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need this to save your cool collages directly to Photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

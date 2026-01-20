@@ -5,6 +5,8 @@ class CameraService {
     
     private let sessionQueue = DispatchQueue(label: "ahc.previously.cameraQueue")
     
+    private let photoOutput = AVCapturePhotoOutput()
+    
     var previewLayer: AVCaptureVideoPreviewLayer?
     
     func setup() {
@@ -20,16 +22,26 @@ class CameraService {
         guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
             return
         }
+        
         do {
             let input = try AVCaptureDeviceInput(device: camera)
             if session.canAddInput(input) {
                 session.addInput(input)
+            }
+            
+            if session.canAddOutput(photoOutput) {
+                session.addOutput(photoOutput)
             }
         } catch {
             
         }
         
         session.commitConfiguration()
+    }
+    
+    func capturePhoto(delegate: AVCapturePhotoCaptureDelegate) {
+        let settings = AVCapturePhotoSettings()
+        photoOutput.capturePhoto(with: settings, delegate: delegate)
     }
     
     func start() {
